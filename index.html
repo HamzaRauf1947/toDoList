@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="./Images/Netflix_2015_N_logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="src/output.css">
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+      -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <style>
+        @layer utilities {
+            .before\:content-['']::before {
+                content: '';
+            }
+
+            .before\:bg-unchecked::before {
+                background-image: url('./images/unchecked.png');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .checked {
+                color: #555;
+                text-decoration: line-through;
+            }
+
+            .before\:checked::before {
+                background-image: url('./images/checked.png');
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            ul li span {
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                color: #555;
+                line-height: 40px;
+                border-radius: 50%;
+                text-align: center;
+                right: 0;
+                top: 5px;
+                font-size: 22px;
+            }
+
+            ul li span:hover {
+                background: #edeef0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="Container bg-gradient-to-r from-violet-600 to-indigo-600 min-w-[336px] min-h-[100vh] p-[10px]">
+        <div class="todo-list w-[100%] max-w-[540px] bg-[#fff] m-[50px_auto_20px] p-[40px_30px_70px] rounded-[10px]">
+            <div class="flex items-center gap-[10px] mb-[20px]">
+                <h2 class="text-[20px] font-bold text-[#002765]">To-Do List</h2>
+                <img class="w-[30px]" src="./images/icon.png" alt="Icon">
+            </div>
+            <div class="flex justify-between gap-[10px] rounded-[40px] bg-[#edeef0] mb-[20px]">
+                <input class="bg-transparent outline-none flex-1 pl-[16px] py-[8px]" id="inp-box" type="text"
+                    placeholder="Add your List Here">
+                <button class="Addbtn p-[8px_25px] bg-[#ff5945] rounded-[40px] text-[#fff] text-[20px]"><i
+                        class="fa-regular fa-plus"></i></button>
+            </div>
+
+
+            <ul id="listContainer">
+                <!-- List items will be dynamically added here -->
+            </ul>
+            <!-- <div id="divOfCross" class="h-[28px] w-[28px] bg-[gray] rounded-[50%] flex justify-center items-center">
+                            
+                        </div> -->
+        </div>
+
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
